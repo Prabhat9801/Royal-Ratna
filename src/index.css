@@ -795,8 +795,8 @@ section {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-title { font-size: 3.8rem; }
-  .contact-grid { flex-direction: column; }
-  .contact-map .map-embed-wrapper { height: 400px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-map .map-embed-wrapper { height: 400px; width: 100%; }
   .footer-container { grid-template-columns: 1fr 1fr; }
 }
 
@@ -805,15 +805,29 @@ section {
   .mobile-menu-btn { display: block; }
   .mobile-menu { display: flex; }
   
-  .hero-title { font-size: 2.8rem; }
+  .hero-title { font-size: 2.8rem; line-height: 1.2; }
   .hero-subtitle { font-size: 1.2rem; }
   
+  section { padding: 60px 0; }
   .section-title { font-size: 2.2rem; }
   
   .footer-container { grid-template-columns: 1fr; gap: 40px; }
   .bottom-container { flex-direction: column; gap: 10px; text-align: center; }
   
-  .hero-cta, .cta-btns { justify-content: flex-start; }
-  .hero-btn, .cta-btn, .contact-btns a { flex: 1; text-align: center; }
-  .contact-btns { width: 100%; flex-direction: column; }
+  .hero-cta, .cta-btns { flex-direction: column; width: 100%; }
+  .hero-btn, .cta-btn { width: 100%; text-align: center; }
+  .contact-btns { flex-direction: column; width: 100%; }
+  .contact-btns a { width: 100%; text-align: center; }
+  
+  /* Mobile Map scaling */
+  .contact-info { padding: 30px 20px; }
+  .contact-map .map-embed-wrapper { height: 350px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.2rem; }
+  .section-title { font-size: 1.8rem; }
+  .menu-list { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
 }

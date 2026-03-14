@@ -36,10 +36,10 @@ const Contact = () => {
             </div>
             
             <div className="contact-btns">
-              <a href="https://maps.google.com/?q=Royal+Ratna+Premium+Veg+Restaurant+Raipur" target="_blank" rel="noreferrer" className="btn-primary" style={{ width: '100%', marginBottom: '10px' }}>
+              <a href="https://maps.google.com/?q=Royal+Ratna+Premium+Veg+Restaurant+Raipur" target="_blank" rel="noreferrer" className="btn-primary">
                 Get Directions
               </a>
-              <a href="tel:+910000000000" className="btn-outline-primary" style={{ width: '100%' }}>
+              <a href="tel:+910000000000" className="btn-outline-primary">
                 Call Now
               </a>
             </div>
