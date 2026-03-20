@@ -53,10 +53,5 @@ const Hero = () => {
     </section>
   );
 };
-      
-      {/* Floating Sparkles/Steam placeholder if needed via CSS later */}
-    </section>
-  );
-};
 
 export default Hero;

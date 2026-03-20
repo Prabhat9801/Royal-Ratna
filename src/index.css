@@ -599,7 +599,7 @@ section {
 .cta-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(11, 45, 92, 0.92);
+  background: rgba(15, 11, 8, 0.95);
 }
 
 .cta-content {
@@ -627,9 +627,11 @@ section {
 
 /* Footer Section */
 .footer {
-  background-color: var(--primary-dark);
-  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
   padding-top: 80px;
+  position: relative;
+  border-top: 1px solid rgba(200, 155, 60, 0.1);
 }
 
 .footer-container {
@@ -650,7 +652,7 @@ section {
 }
 
 .footer-heading {
-  color: var(--secondary);
+  color: var(--primary);
   font-size: 1.4rem;
   margin-bottom: 24px;
 }
@@ -662,17 +664,19 @@ section {
 }
 
 .footer-links a {
-  transition: var(--transition);
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
 }
 
 .footer-links a:hover {
-  color: var(--secondary);
+  color: var(--primary);
   padding-left: 5px;
 }
 
 .footer-bottom {
-  background-color: rgba(0,0,0,0.3);
+  background-color: var(--bg-main);
   padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.03);
 }
 
 .bottom-container {
