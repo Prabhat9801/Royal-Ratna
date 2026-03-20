@@ -144,46 +144,72 @@ ul {
 .mb-4 { margin-bottom: 2rem; }
 .mt-5 { margin-top: 4rem; }
 
-/* Floating Animation */
-.floating {
-  animation: floating-effect 3s ease-in-out infinite;
+/* SECTION DEPTH SYSTEM */
+.section-dark {
+  background: #0F0B08;
+  color: #FFFFFF;
 }
 
-@keyframes floating-effect {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+.section-brown {
+  background: #1A120B;
+  color: #FFFFFF;
 }
-.btn-outline-primary {
-  display: inline-block;
-  border: 2px solid var(--primary);
-  padding: 16px 38px;
-  border-radius: var(--radius);
-  color: var(--primary);
+
+.section-light {
+  background: #F8F5F0;
+  color: #1A1A1A;
+}
+
+.section-light .section-title {
+  -webkit-text-fill-color: var(--text-dark); /* Dark title on light bg */
+}
+
+/* HERO READABILITY FIX */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.3)
+  );
+  z-index: 1;
+}
+
+/* REVIEWS VISIBILITY FIX */
+.review-card {
+  background: #1A120B;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition-smooth);
+}
+
+.review-text {
+  color: #EDEDED;
+  opacity: 0.95;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.review-author {
+  color: #C89B3C;
   font-weight: 700;
-  transition: var(--transition);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  cursor: pointer;
-  text-align: center;
+  margin-top: 20px;
+  display: block;
 }
 
-.btn-outline-primary:hover {
-  background: var(--primary);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-/* Sections */
+/* Sections Base */
 section {
   padding: 140px 0;
   position: relative;
+  overflow: hidden;
 }
 
 .section-title {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  margin-bottom: 30px;
+  background: var(--gold-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -193,9 +219,7 @@ section {
 .section-subtitle {
   font-size: 1.25rem;
   max-width: 800px;
-  margin-inline: auto;
-  margin-bottom: 5rem;
-  color: var(--text-muted);
+  margin-bottom: 60px;
 }
 
 .title-underline {

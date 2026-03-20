@@ -26,7 +26,7 @@ const Menu = () => {
   const [activeTab, setActiveTab] = React.useState("Breakfast");
 
   return (
-    <section id="menu" className="menu-premium" style={{ background: 'var(--primary-base)', padding: '120px 0' }}>
+    <section id="menu" className="section-light">
       <div className="container">
         <div className="text-center">
            <motion.div 
@@ -34,9 +34,8 @@ const Menu = () => {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
            >
-             <h4 style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '10px' }}>Discover flavors</h4>
-             <h2 className="section-title" style={{ color: 'var(--text-white)', fontSize: '4rem' }}>The Curated Menu</h2>
-             <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
+             <h4 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '10px' }}>Discover flavors</h4>
+             <h2 className="section-title">The Curated Menu</h2>
            </motion.div>
         </div>
 
@@ -46,14 +45,15 @@ const Menu = () => {
               key={cat}
               className={`btn-shimmer ${activeTab === cat ? 'active' : ''}`}
               style={{ 
-                background: activeTab === cat ? 'var(--gold-gradient)' : 'transparent',
-                color: activeTab === cat ? 'var(--primary-base)' : 'var(--accent)',
-                border: activeTab === cat ? 'none' : '1px solid var(--accent)',
+                background: activeTab === cat ? 'var(--gold-gradient)' : 'white',
+                color: activeTab === cat ? 'white' : 'var(--text-dark)',
+                border: activeTab === cat ? 'none' : '1px solid rgba(0,0,0,0.1)',
                 padding: '12px 30px',
                 borderRadius: '50px',
                 fontWeight: 'bold',
                 cursor: 'pointer',
-                transition: 'var(--transition-smooth)'
+                transition: 'var(--transition-smooth)',
+                boxShadow: activeTab === cat ? '0 10px 20px rgba(200,155,60,0.2)' : 'none'
               }}
               onClick={() => setActiveTab(cat)}
             >
@@ -65,42 +65,42 @@ const Menu = () => {
         <AnimatePresence mode="wait">
           <motion.div 
             key={activeTab}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
             className="menu-list"
             style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
               gap: '20px' 
             }}
           >
             {menuData[activeTab].map((item, i) => (
               <motion.div 
-                 className="menu-item-row-premium active-3d" 
                  key={i}
-                 whileHover={{ x: 15, scale: 1.02 }}
+                 whileHover={{ x: 10 }}
                  style={{ 
-                   background: 'var(--glass-panel)', 
-                   border: 'var(--glass-border)', 
+                   background: 'white', 
+                   border: '1px solid rgba(0,0,0,0.05)', 
                    padding: '24px', 
                    borderRadius: '16px', 
                    display: 'flex', 
                    justifyContent: 'space-between', 
                    alignItems: 'center',
-                   cursor: 'pointer'
+                   cursor: 'pointer',
+                   boxShadow: '0 4px 15px rgba(0,0,0,0.03)'
                  }}
               >
                 <div className="item-details">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span className="menu-item-name" style={{ fontSize: '1.2rem', color: 'var(--text-white)', fontWeight: 'bold' }}>{item.name}</span>
-                    {i === 0 && <span style={{ fontSize: '0.65rem', background: 'var(--highlight)', color: 'white', padding: '2px 8px', borderRadius: '4px' }}>POPULAR</span>}
+                    <span style={{ fontSize: '1.2rem', color: '#1A1A1A', fontWeight: 'bold' }}>{item.name}</span>
+                    {i === 0 && <span style={{ fontSize: '0.65rem', background: 'var(--primary)', color: 'white', padding: '2px 8px', borderRadius: '4px' }}>BEST SELLER</span>}
                   </div>
-                  <span className="menu-item-desc" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>{item.desc}</span>
+                  <span style={{ fontSize: '0.85rem', color: 'rgba(0,0,0,0.6)' }}>{item.desc}</span>
                 </div>
                 <div className="item-price" style={{ textAlign: 'right' }}>
-                  <span style={{ fontSize: '1.1rem', color: 'var(--accent)', fontWeight: '800' }}>{item.price}</span>
+                  <span style={{ fontSize: '1.1rem', color: 'var(--primary)', fontWeight: '800' }}>{item.price}</span>
                 </div>
               </motion.div>
             ))}

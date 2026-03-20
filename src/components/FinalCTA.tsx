@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const FinalCTA = () => {
   return (
-    <section className="final-cta">
-      <div className="cta-overlay"></div>
+    <section className="section-dark" style={{ position: 'relative', overflow: 'hidden' }}>
+      <div className="cta-overlay" style={{ background: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.4))' }}></div>
       <div className="container text-center cta-content">
         <motion.div
            initial={{ scale: 0.9, opacity: 0 }}

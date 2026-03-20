@@ -27,7 +27,7 @@ const breakfastItems = [
 
 const BreakfastSpecial = () => {
   return (
-    <section id="all-day-breakfast" style={{ background: 'var(--bg-main)', padding: '100px 0' }}>
+    <section id="all-day-breakfast" className="section-brown">
       <div className="container">
         <div className="text-center">
           <motion.h2 

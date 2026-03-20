@@ -22,19 +22,23 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section id="reviews" className="reviews-section">
+    <section id="reviews" className="section-dark">
       <div className="container">
         <div className="reviews-header text-center">
-          <h2 className="section-title">Customer Reviews</h2>
-          <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
-          <div className="rating-badge mx-auto mt-4" style={{ marginInline: 'auto' }}>
-            <Star fill="var(--secondary)" color="var(--secondary)" size={24} />
-            <span className="rating-number">3.9 / 5</span>
-            <span className="rating-text">Google Reviews</span>
+          <h2 className="section-title">Verified Experiences</h2>
+          <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}>
+            What our regulars say about the lounge atmosphere.
+          </p>
+          <div className="rating-summary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginBottom: '60px' }}>
+            <div style={{ display: 'flex', gap: '5px' }}>
+              {[1,2,3,4,5].map(s => <Star key={s} fill={s <= 4 ? "var(--primary)" : "transparent"} color="var(--primary)" size={18} />)}
+            </div>
+            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>3.9 / 5.0</span>
+            <span style={{ opacity: 0.6 }}>Google Reviews</span>
           </div>
         </div>
 
-        <div className="reviews-grid">
+        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
           {reviews.map((rev, i) => (
             <motion.div 
               className="review-card" 
@@ -44,13 +48,13 @@ const Reviews = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="stars">
-                {[...Array(rev.stars)].map((_, j) => (
-                  <Star key={j} fill="var(--secondary)" color="var(--secondary)" size={16} />
+              <div className="stars" style={{ display: 'flex', gap: '5px', marginBottom: '20px' }}>
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} fill={j < rev.stars ? "var(--primary)" : "transparent"} color="var(--primary)" size={16} />
                 ))}
               </div>
               <p className="review-text">"{rev.text}"</p>
-              <p className="review-author">- {rev.author}</p>
+              <span className="review-author">{rev.author}</span>
             </motion.div>
           ))}
         </div>

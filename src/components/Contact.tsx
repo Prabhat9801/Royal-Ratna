@@ -4,7 +4,7 @@ import { MapPin, UtensilsCrossed, CheckCircle2 } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" style={{ background: 'var(--bg-main)', padding: '120px 0' }}>
+    <section id="contact" className="section-brown">
       <div className="container">
         <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
           <motion.div 

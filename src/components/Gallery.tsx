@@ -12,25 +12,47 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="gallery-section">
+    <section id="gallery" className="section-dark">
       <div className="container">
         <div className="text-center">
           <h2 className="section-title">The Lounge Experience</h2>
-          <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
-          <p className="section-subtitle">A glimpse into our artsy decor, magical garden, and vibrant atmosphere.</p>
+          <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}>
+            Captured moments of art, coffee, and comfort.
+          </p>
         </div>
         
-        <div className="gallery-grid">
+        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px' }}>
           {images.map((src, i) => (
             <motion.div 
-              className="gallery-item" 
+              className="gallery-card" 
               key={i}
-              initial={{ scale: 0.9, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              style={{ 
+                position: 'relative', 
+                height: '400px', 
+                borderRadius: '16px', 
+                overflow: 'hidden',
+                cursor: 'pointer'
+              }}
             >
-              <img src={src} alt="The Living Room Experience" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px' }} />
+              <img src={src} alt="Lounge" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div 
+                className="gallery-overlay"
+                style={{ 
+                  position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', 
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                  display: 'flex', alignItems: 'flex-end', padding: '30px',
+                  opacity: 0, transition: '0.3s'
+                }}
+              >
+                <h3 style={{ color: 'var(--primary)', fontSize: '1.2rem' }}>Lounge Moment</h3>
+              </div>
+              <style dangerouslySetInnerHTML={{ __html: `
+                .gallery-card:hover .gallery-overlay { opacity: 1 !important; }
+              `}} />
             </motion.div>
           ))}
         </div>
