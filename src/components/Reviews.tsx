@@ -22,23 +22,21 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section id="reviews" className="section-dark">
+    <section id="reviews" className="section-hero">
       <div className="container">
         <div className="reviews-header text-center">
           <h2 className="section-title">Verified Experiences</h2>
-          <p className="section-subtitle" style={{ color: 'var(--text-secondary)' }}>
-            What our regulars say about the lounge atmosphere.
-          </p>
+          <p className="section-subtitle">What our regulars say about the lounge atmosphere.</p>
           <div className="rating-summary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginBottom: '60px' }}>
             <div style={{ display: 'flex', gap: '5px' }}>
-              {[1,2,3,4,5].map(s => <Star key={s} fill={s <= 4 ? "var(--primary)" : "transparent"} color="var(--primary)" size={18} />)}
+              {[1,2,3,4,5].map(s => <Star key={s} fill={s <= 4 ? "#E6B85C" : "transparent"} color="#E6B85C" size={18} />)}
             </div>
             <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>3.9 / 5.0</span>
             <span style={{ opacity: 0.6 }}>Google Reviews</span>
           </div>
         </div>
 
-        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
           {reviews.map((rev, i) => (
             <motion.div 
               className="review-card" 
@@ -50,11 +48,11 @@ const Reviews = () => {
             >
               <div className="stars" style={{ display: 'flex', gap: '5px', marginBottom: '20px' }}>
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} fill={j < rev.stars ? "var(--primary)" : "transparent"} color="var(--primary)" size={16} />
+                  <Star key={j} fill={j < rev.stars ? "#E6B85C" : "transparent"} color="#E6B85C" size={16} />
                 ))}
               </div>
               <p className="review-text">"{rev.text}"</p>
-              <span className="review-author">{rev.author}</span>
+              <span className="review-author" style={{ color: '#E6B85C', fontWeight: 600 }}>{rev.author}</span>
             </motion.div>
           ))}
         </div>

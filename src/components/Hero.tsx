@@ -4,7 +4,7 @@ import { Star, Paintbrush, Trees } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="section-dark" style={{ position: 'relative', height: '100vh', display: 'flex', alignItems: 'center', padding: 0 }}>
+    <section id="home" className="section-hero" style={{ position: 'relative', height: '100vh', display: 'flex', alignItems: 'center', padding: 0 }}>
       <div 
         className="hero-media"
         style={{ 
@@ -17,7 +17,7 @@ const Hero = () => {
         className="hero-overlay" 
         style={{ 
           position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', 
-          background: 'linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.3))' 
+          background: 'linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0.2))' 
         }}
       ></div>
 

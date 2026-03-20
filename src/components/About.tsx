@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="section-dark" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section id="about" className="section-accent" style={{ position: 'relative', overflow: 'hidden' }}>
       <div 
         className="parallax-bg" 
         style={{ 

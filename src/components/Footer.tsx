@@ -3,7 +3,7 @@ import { Coffee, Star } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="section-footer" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
       <div className="container footer-container">
         <div className="footer-brand">
           <div className="logo footer-logo">

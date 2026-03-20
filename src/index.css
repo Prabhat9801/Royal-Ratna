@@ -144,14 +144,9 @@ ul {
 .mb-4 { margin-bottom: 2rem; }
 .mt-5 { margin-top: 4rem; }
 
-/* SECTION DEPTH SYSTEM */
-.section-dark {
+/* FINAL SECTION COLOR SYSTEM */
+.section-hero {
   background: #0F0B08;
-  color: #FFFFFF;
-}
-
-.section-brown {
-  background: #1A120B;
   color: #FFFFFF;
 }
 
@@ -161,42 +156,80 @@ ul {
 }
 
 .section-light .section-title {
-  -webkit-text-fill-color: var(--text-dark); /* Dark title on light bg */
+  background: linear-gradient(135deg, #1A1A1A, #444444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* HERO READABILITY FIX */
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.3)
-  );
-  z-index: 1;
+.section-warm {
+  background: linear-gradient(135deg, #1A120B, #2C1E1A);
+  color: #FFFFFF;
 }
 
-/* REVIEWS VISIBILITY FIX */
+.section-accent {
+  background: linear-gradient(135deg, #2C1E1A, #1A120B);
+  color: #FFFFFF;
+}
+
+.section-footer {
+  background: #080605;
+  color: #FFFFFF;
+}
+
+/* CARDS & IMAGES CONSISTENCY */
+.card-img-premium {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.floating-card-premium {
+  background: #1A120B;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* REVIEWS FINAL FIX (PURE READABILITY) */
 .review-card {
   background: #1A120B;
-  padding: 40px;
-  border-radius: 20px;
+  border-radius: 16px;
+  padding: 30px;
   border: 1px solid rgba(255,255,255,0.05);
   transition: var(--transition-smooth);
 }
 
 .review-text {
-  color: #EDEDED;
+  color: #FFFFFF !important;     /* PURE WHITE */
   opacity: 0.95;
-  font-size: 1.1rem;
   line-height: 1.6;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
 .review-author {
-  color: #C89B3C;
-  font-weight: 700;
-  margin-top: 20px;
-  display: block;
+  color: #E6B85C !important;     /* SOFT GOLD */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+/* HERO IMPROVEMENT */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.3)
+  );
+  z-index: 1;
 }
 
 /* Sections Base */
@@ -220,7 +253,9 @@ section {
   font-size: 1.25rem;
   max-width: 800px;
   margin-bottom: 60px;
+  opacity: 0.9;
 }
+
 
 .title-underline {
   width: 120px;

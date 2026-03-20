@@ -11,7 +11,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="features-section">
+    <section className="section-light">
       <div className="container">
         <div className="text-center">
           <h2 className="section-title">Why Visit The Living Room</h2>
