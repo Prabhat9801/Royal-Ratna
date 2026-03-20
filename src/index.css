@@ -350,28 +350,38 @@ section {
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: var(--white);
-  padding: 24px;
-  box-shadow: var(--shadow-md);
+  background: rgba(15, 11, 8, 0.98);
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 999;
 }
 
 .mobile-nav-link {
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 1.25rem;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: var(--transition-smooth);
 }
 
-/* Hero Section - Cinematic Hyper-Realistic Overhaul */
+.mobile-nav-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 16px !important;
+}
 .hero-section {
   min-height: 100vh;
   position: relative;
@@ -745,42 +755,100 @@ section {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-title { font-size: 3.8rem; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .contact-map .map-embed-wrapper { height: 400px; width: 100%; }
-  .footer-container { grid-template-columns: 1fr 1fr; }
+/* ==========================================================================
+   RESPONSIVE DESIGN OVERHAUL
+   ========================================================================== */
+
+/* Fluid Typography */
+:root {
+  --fs-h1: clamp(2.5rem, 8vw, 5.5rem);
+  --fs-h2: clamp(2rem, 5vw, 4rem);
+  --fs-p: clamp(0.95rem, 2vw, 1.25rem);
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+}
+
+h1 { font-size: var(--fs-h1); }
+
+@media (max-width: 1400px) {
+  .container { max-width: 1200px; }
+}
+
+@media (max-width: 1200px) {
+  .container { padding: 0 30px; }
+  .hero-section h1 { font-size: 4.5rem; }
+}
+
+@media (max-width: 991px) {
+  section { padding: 100px 0; }
+  
+  /* Grid Stacking */
+  .hero-section .container > div,
+  .about-grid,
+  .contact-grid,
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 50px !important;
+    text-align: center;
+  }
+
+  .text-left { text-align: center; }
+  
+  .hero-section .container > div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /* Reset Button Alignment */
+  div[style*="display: flex"] {
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+
+  .about-stats {
+    justify-content: center !important;
+  }
 }
 
 @media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  
   .desktop-menu { display: none; }
   .mobile-menu-btn { display: block; }
-  .mobile-menu { display: flex; }
+
+  section { padding: 80px 0; }
+
+  .hero-section h1 { font-size: 3.2rem; }
+  .section-title { font-size: 2.5rem; }
   
-  .hero-title { font-size: 2.8rem; line-height: 1.2; }
-  .hero-subtitle { font-size: 1.2rem; }
-  
-  section { padding: 60px 0; }
-  .section-title { font-size: 2.2rem; }
-  
-  .footer-container { grid-template-columns: 1fr; gap: 40px; }
-  .bottom-container { flex-direction: column; gap: 10px; text-align: center; }
-  
-  .hero-cta, .cta-btns { flex-direction: column; width: 100%; }
-  .hero-btn, .cta-btn { width: 100%; text-align: center; }
-  .contact-btns { flex-direction: column; width: 100%; }
-  .contact-btns a { width: 100%; text-align: center; }
-  
-  /* Mobile Map scaling */
-  .contact-info { padding: 30px 20px; }
-  .contact-map .map-embed-wrapper { height: 350px; }
+  .menu-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  .breakfast-grid, .reviews-grid, .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .map-embed-wrapper {
+    height: 400px !important;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 2.2rem; }
-  .section-title { font-size: 1.8rem; }
-  .menu-list { grid-template-columns: 1fr; }
-  .features-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .hero-section h1 { font-size: 2.5rem; }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .logo { font-size: 1.4rem; }
 }
+
