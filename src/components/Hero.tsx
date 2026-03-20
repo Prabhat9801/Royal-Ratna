@@ -9,28 +9,43 @@ const Hero = () => {
       <div className="container hero-content">
         <motion.div 
           className="hero-text"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <div className="trust-badges">
-            <span className="badge"><Star className="icon badge-icon" size={16} fill="currentColor" /> 3.9 Rating</span>
-            <span className="badge"><Paintbrush className="icon badge-icon" size={16} /> Artsy Decor</span>
-            <span className="badge"><Trees className="icon badge-icon" size={16} /> Outdoor Garden</span>
+            <motion.span 
+              className="badge"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              <Star className="icon badge-icon" size={16} fill="currentColor" /> 3.9 Rating
+            </motion.span>
+            <motion.span 
+              className="badge"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              <Paintbrush className="icon badge-icon" size={16} /> Artsy Decor
+            </motion.span>
           </div>
           
           <h1 className="hero-title">The Living Room<br/>Cafe & Lounge</h1>
           
           <p className="hero-subtitle">
-            Arts, Coffee, and Comfort. Our cozy nook has been Raipur's favorite social spot since 2017.
+            Arts, Coffee & Comfort
           </p>
           
           <div className="hero-cta">
             <a href="#menu" className="btn-primary">View Menu</a>
-            <a href="https://maps.google.com/?q=The+Living+Room+Cafe+Lounge+VIP+Road+Raipur" target="_blank" rel="noreferrer" className="btn-secondary">Get Directions</a>
+            <a href="#contact" className="btn-secondary">Book Table</a>
           </div>
         </motion.div>
       </div>
+      
+      {/* Floating Sparkles/Steam placeholder if needed via CSS later */}
     </section>
   );
 };
