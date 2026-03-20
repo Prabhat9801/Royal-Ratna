@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Star } from 'lucide-react';
+import { Coffee, Star, MapPin, Clock, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -33,14 +33,22 @@ const Footer = () => {
         
         <div className="footer-address">
           <h4 className="footer-heading">Visit Us</h4>
-          <p>
-            VIP Road (Airport Road)<br/>
-            Towards Phunder Chowk<br/>
-            Raipur, Chhattisgarh 492001
-          </p>
-          <p className="footer-hours mt-4" style={{ marginTop: '16px' }}>
-            Open daily until 12:30 AM
-          </p>
+          <div style={{ display: 'flex', gap: '12px', marginBottom: '16px', alignItems: 'flex-start' }}>
+            <MapPin size={20} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '3px' }} />
+            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+              VIP Road (Airport Road)<br/>
+              Towards Phunder Chowk<br/>
+              Raipur, Chhattisgarh 492001
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: '12px', marginBottom: '16px', alignItems: 'center' }}>
+            <Clock size={20} style={{ color: 'var(--primary)', flexShrink: 0 }} />
+            <p style={{ color: 'var(--text-secondary)' }}>Open daily until 12:30 AM</p>
+          </div>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+            <Phone size={20} style={{ color: 'var(--primary)', flexShrink: 0 }} />
+            <a href="tel:+919285555002" style={{ color: 'var(--primary)', fontWeight: 600 }}>+91 92855 55002</a>
+          </div>
         </div>
       </div>
       

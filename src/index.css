@@ -751,6 +751,8 @@ section {
 .footer-desc {
   margin-bottom: 24px;
   max-width: 350px;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .footer-heading {
@@ -786,6 +788,8 @@ section {
   justify-content: space-between;
   align-items: center;
   font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 /* ==========================================================================
@@ -850,6 +854,45 @@ h1 { font-size: var(--fs-h1); }
     justify-content: center !important;
     flex-wrap: wrap;
   }
+
+  /* Footer responsive */
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    text-align: center;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links-group {
+    text-align: center;
+  }
+
+  .footer-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-address > div {
+    justify-content: center;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -875,6 +918,31 @@ h1 { font-size: var(--fs-h1); }
   .map-embed-wrapper {
     height: 400px !important;
   }
+
+  /* Footer 768px */
+  .section-footer {
+    padding-top: 60px;
+  }
+
+  .footer-container {
+    gap: 30px !important;
+  }
+
+  .footer-heading {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -887,5 +955,39 @@ h1 { font-size: var(--fs-h1); }
 
   .logo { font-size: 1rem; gap: 5px; }
   .logo-span { display: none !important; } /* Only "The Living Room" + Icon */
+
+  /* Footer 480px */
+  .section-footer {
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    gap: 25px !important;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem !important;
+  }
+
+  .footer-desc {
+    font-size: 0.9rem;
+  }
+
+  .footer-heading {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .footer-address p,
+  .footer-address a {
+    font-size: 0.9rem;
+  }
+
+  .bottom-container p {
+    font-size: 0.8rem;
+  }
 }
 

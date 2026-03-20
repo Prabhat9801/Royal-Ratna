@@ -45,7 +45,7 @@ const Contact = () => {
             }}
           >
             <iframe 
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.520421278166!2d81.7005406!3d21.218576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c313dfa74e5d%3A0xe7f920f666f44d!2sThe%20Living%20Room!5e0!3m2!1sen!2sin!4v1614234567890!5m2!1sen!2sin" 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.1409410401498!2d81.68370407526204!3d21.226258980472927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd2bdabe3d3b%3A0xc25e0f5f4ce3f19c!2sThe%20Living%20Room%20Cafe%20%26%20Lounge!5e0!3m2!1sen!2sin!4v1774023124704!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
