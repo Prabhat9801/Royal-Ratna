@@ -23,20 +23,25 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} style={{ 
+      transition: 'all 0.4s ease',
+      background: isScrolled ? 'rgba(15, 11, 8, 0.95)' : 'transparent',
+      padding: isScrolled ? '15px 0' : '25px 0',
+      borderBottom: isScrolled ? '1px solid rgba(200, 155, 60, 0.2)' : 'none'
+    }}>
       <div className="nav-container container">
-        <div className="logo">
-          <Coffee className="logo-icon" size={28} />
-          <span className="logo-text">The Living Room Cafe & Lounge</span>
+        <div className="logo" style={{ color: 'white', fontWeight: 800 }}>
+          <Coffee key="coffee" style={{ color: 'var(--primary)', marginRight: '10px' }} size={24} />
+          <span>The Living Room <span style={{ color: 'var(--primary)' }}>Cafe & Lounge</span></span>
         </div>
         
-        <div className="desktop-menu">
+        <div className="desktop-menu" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link">
+            <a key={link.name} href={link.href} className="nav-link" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'white', letterSpacing: '1px', textTransform: 'uppercase' }}>
               {link.name}
             </a>
           ))}
-          <a href="#contact" className="btn-primary nav-btn">Order Now</a>
+          <a href="#contact" className="btn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }}>Order Now</a>
         </div>
 
         <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

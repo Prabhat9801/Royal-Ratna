@@ -5,83 +5,79 @@ const breakfastItems = [
   {
     title: 'Chocolate Brownie Sundae',
     price: '₹249',
-    desc: 'Warm brownie topped with artisanal vanilla bean ice cream and molten rich fudge.',
+    desc: 'Warm brownie with vanilla ice cream & chocolate drizzle.',
     img: '/images/Food/1563871793_1563871769777.jpg.webp',
-    chefRecommended: false
+    label: ''
   },
   {
     title: 'Chicken Keema Pav',
     price: '₹350',
-    desc: 'Slow-cooked minced chicken with secret hand-ground spices and toasted buttered pav.',
+    desc: 'Spicy minced chicken served with butter pav.',
     img: '/images/Food/listicle_1730891901578_1cu9n_4235x2000.jpg',
-    chefRecommended: true
+    label: 'popular'
   },
   {
     title: 'Chocolate Freak Shake',
     price: '₹289',
-    desc: 'A decadent masterpiece of premium cocoa, brownie crumbs, and velvet whipped cream.',
+    desc: 'Loaded chocolate shake with toppings & cream.',
     img: '/images/Food/photo.avif',
-    chefRecommended: false
+    label: ''
   }
 ];
 
 const BreakfastSpecial = () => {
   return (
-    <section id="all-day-breakfast" className="breakfast-premium">
+    <section id="all-day-breakfast" style={{ background: 'var(--bg-main)', padding: '100px 0' }}>
       <div className="container">
         <div className="text-center">
           <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="section-title"
+            style={{ color: 'var(--primary)', fontSize: '3.5rem', marginBottom: '10px' }}
           >
-            Signature Masterpieces
+            Signature Dishes
           </motion.h2>
-          <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
-          <p className="section-subtitle">
-            Indulge in our most loved flavors, crafted with passion and premium ingredients.
+          <p className="section-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '60px' }}>
+            Handpicked favorites from our curated kitchen.
           </p>
         </div>
         
-        <div className="breakfast-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', perspective: '1200px' }}>
+        <div className="breakfast-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
           {breakfastItems.map((item, index) => (
             <motion.div 
-              className="breakfast-card active-3d shimmer" 
+              className="food-card-premium" 
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ 
-                scale: 1.05, 
-                rotateX: 6, 
-                rotateY: 6,
-                z: 50
+                y: -8, 
+                scale: 1.02,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.4)"
               }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.4 }}
               style={{ 
-                position: 'relative', 
-                background: 'var(--glass-panel)', 
-                backdropFilter: 'var(--glass-blur)', 
-                border: 'var(--glass-border)', 
-                borderRadius: 'var(--radius-lg)',
-                padding: '24px',
-                textAlign: 'left'
+                background: 'var(--bg-card)', 
+                borderRadius: 'var(--radius-lg)', 
+                overflow: 'hidden',
+                border: '1px solid rgba(200, 155, 60, 0.1)'
               }}
             >
-              {item.chefRecommended && (
-                <div className="chef-badge" style={{ position: 'absolute', top: '-15px', right: '15px', background: 'var(--gold-gradient)', color: 'var(--primary-base)', padding: '6px 16px', borderRadius: '30px', fontSize: '0.75rem', fontWeight: 'bold' }}>
-                  CHEF RECOMMENDED
-                </div>
-              )}
-              <div className="floating-img-wrapper" style={{ overflow: 'hidden', borderRadius: '16px', height: '260px', marginBottom: '20px' }}>
-                 <img src={item.img} alt={item.title} className="floating" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div className="img-holder" style={{ height: '280px', position: 'relative' }}>
+                 <img src={item.img} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                 {item.label && (
+                   <span style={{ position: 'absolute', top: '15px', right: '15px', background: 'var(--accent)', color: 'white', padding: '4px 12px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold' }}>
+                     {item.label.toUpperCase()}
+                   </span>
+                 )}
               </div>
-              <div className="card-info">
-                <h3 className="breakfast-title" style={{ fontSize: '1.6rem', color: 'var(--accent)', marginBottom: '10px' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.95rem', marginBottom: '20px', color: 'var(--text-white)', opacity: 0.8 }}>{item.desc}</p>
+              <div className="card-body" style={{ padding: '30px' }}>
+                <h3 style={{ fontSize: '1.5rem', color: 'var(--primary)', marginBottom: '10px' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '25px' }}>{item.desc}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                   <span className="price-tag" style={{ background: 'rgba(200, 155, 60, 0.15)', border: '1px solid var(--accent)', padding: '6px 16px', borderRadius: '50px', color: 'var(--accent-glow)', fontWeight: 'bold' }}>{item.price}</span>
-                   <button className="btn-primary" style={{ padding: '10px 20px', fontSize: '0.8rem' }}>Reserve Now</button>
+                   <span style={{ fontSize: '1.3rem', color: 'white', fontWeight: 'bold' }}>{item.price}</span>
+                   <button className="btn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }}>Order Now</button>
                 </div>
               </div>
             </motion.div>
