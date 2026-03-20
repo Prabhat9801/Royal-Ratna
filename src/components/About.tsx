@@ -12,9 +12,8 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {/* We will just use the food meal image as an abstract representation if we don't have interior */}
           <div className="img-wrapper">
-             <img src="/images/veg_meal_1773510860161.png" alt="Delicious Indian Food" className="about-img-main" />
+             <img src="/images/Interior/the-living-room-cafe-raipur-ho-raipur-chhattisgarh-multicuisine-restaurants-tzeu0.avif" alt="The Living Room Interior" className="about-img-main" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px' }} />
              <div className="img-accent"></div>
           </div>
         </motion.div>
@@ -26,28 +25,28 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 className="section-title text-left">A Taste of Home in the Heart of Raipur</h2>
+          <h2 className="section-title text-left">Raipur's Social Sanctuary Since 2017</h2>
           <div className="title-underline"></div>
           
           <p className="about-text">
-            <strong>Royal Ratna Premium Veg Restaurant</strong> is known for serving fresh, delicious vegetarian meals prepared with care and quality ingredients. Our goal is simple — make every guest feel at home while enjoying food that is both tasty and affordable.
+            <strong>The Living Room Cafe & Lounge</strong> is more than just a place to eat; it's an experience. Nestled in the heart of Raipur, we've created a cozy, artsy nook where creativity meets comfort. Known for our magical fairy lights, lush outdoor garden, and vibrant lounge atmosphere.
           </p>
           
           <p className="about-text">
-            Whether you're visiting for breakfast, snacks, or a quick meal, Royal Ratna offers a welcoming environment with friendly service and satisfying flavors. We take pride in our identity as a women-owned business that serves food which feels just like "ghar ka khana".
+            Whether you're looking for a quiet morning coffee, a creative work session, or a vibrant weekend hangout with live music, our indoor and outdoor seating offers the perfect backdrop. We take pride in our welcoming environment and our curation of diverse, flavorful menu items.
           </p>
           
           <div className="about-features">
             <div className="feature">
-              <h3>100%</h3>
-              <p>Vegetarian</p>
+              <h3>2017</h3>
+              <p>Established</p>
             </div>
             <div className="feature">
-              <h3>Fresh</h3>
-              <p>Ingredients</p>
+              <h3>Artsy</h3>
+              <p>Ambiance</p>
             </div>
             <div className="feature">
-              <h3>4.9⭐</h3>
+              <h3>3.9⭐</h3>
               <p>Customer Rating</p>
             </div>
           </div>

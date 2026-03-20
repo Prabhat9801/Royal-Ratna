@@ -18,28 +18,28 @@ const Contact = () => {
             <div className="title-underline mb-4"></div>
             
             <p className="contact-desc">
-              Come and experience Raipur's favorite vegetarian dining. We are centrally located and easy to find!
+              Arts, Coffee, and Comfort. Visit us at our vibrant lounge on VIP Road.
             </p>
             
             <div className="contact-item">
               <MapPin className="contact-icon" />
               <div>
                 <h5>Address</h5>
-                <p>280/6 Mahadev Ghat Road<br/>Opposite Punjab National Bank<br/>Sunder Nagar, Raipur<br/>Chhattisgarh 492013</p>
+                <p>VIP Road (Airport Road)<br/>Towards Phunder Chowk<br/>Raipur, Chhattisgarh 492001</p>
               </div>
             </div>
             
             <div className="dining-options">
                <div className="option"><CheckCircle2 size={18} color="var(--primary)" /> Dine-In</div>
-               <div className="option"><CheckCircle2 size={18} color="var(--primary)" /> Drive-Through</div>
-               <div className="option"><CheckCircle2 size={18} color="var(--primary)" /> Delivery</div>
+               <div className="option"><CheckCircle2 size={18} color="var(--primary)" /> Outdoor Seating</div>
+               <div className="option"><CheckCircle2 size={18} color="var(--primary)" /> Live Music</div>
             </div>
             
             <div className="contact-btns">
-              <a href="https://maps.google.com/?q=Royal+Ratna+Premium+Veg+Restaurant+Raipur" target="_blank" rel="noreferrer" className="btn-primary">
+              <a href="https://maps.google.com/?q=The+Living+Room+Cafe+Lounge+VIP+Road+Raipur" target="_blank" rel="noreferrer" className="btn-primary">
                 Get Directions
               </a>
-              <a href="tel:+910000000000" className="btn-outline-primary">
+              <a href="tel:+919285555002" className="btn-outline-primary">
                 Call Now
               </a>
             </div>

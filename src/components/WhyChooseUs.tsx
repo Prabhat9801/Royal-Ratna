@@ -1,13 +1,12 @@
-import React from 'react';
-import { Leaf, Home, DollarSign, Smile, Coffee } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Palette, Trees, Users, Zap, Pizza } from 'lucide-react';
 
 const features = [
-  { icon: <Leaf size={40} />, title: 'Fresh Ingredients', desc: 'Sourced daily to ensure maximum flavor and quality.' },
-  { icon: <Home size={40} />, title: 'Homely Taste', desc: 'Food that reminds you of delicious homemade meals.' },
-  { icon: <DollarSign size={40} />, title: 'Affordable Pricing', desc: 'Premium dining experience that fits your budget.' },
-  { icon: <Smile size={40} />, title: 'Friendly Service', desc: 'A warm, welcoming environment for families and friends.' },
-  { icon: <Coffee size={40} />, title: 'Quick Breakfast & Snacks', desc: 'Perfect spot for a fast, delicious, and fulfilling meal.' }
+  { icon: <Palette size={40} />, title: 'Artsy Decor', desc: 'Beautiful interiors with fairy lights and artistic touches.' },
+  { icon: <Trees size={40} />, title: 'Outdoor Garden', desc: 'Relax in our lush green outdoor seating area.' },
+  { icon: <Users size={40} />, title: 'Social Hub', desc: 'The perfect place for group hangouts and family gatherings.' },
+  { icon: <Zap size={40} />, title: 'Fast Service', desc: 'Prompt service to ensure you never have to wait long.' },
+  { icon: <Pizza size={40} />, title: 'Diverse Menu', desc: 'From Italian to Mumbai street food, we have it all.' }
 ];
 
 const WhyChooseUs = () => {
@@ -15,10 +14,10 @@ const WhyChooseUs = () => {
     <section className="features-section">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">Why Choose Us</h2>
+          <h2 className="section-title">Why Visit The Living Room</h2>
           <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
           <p className="section-subtitle">
-            What makes Royal Ratna the preferred destination for food lovers in Raipur
+            Experience the perfect blend of arts, comfort, and Raipur's most loved flavors.
           </p>
         </div>
         

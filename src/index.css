@@ -1,22 +1,22 @@
 :root {
-  /* Brand Colors */
-  --primary: #0B2D5C;       /* Royal Blue */
-  --primary-rgb: 11, 45, 92;
-  --primary-light: #164687;
-  --primary-dark: #051A36;
+  /* Brand Colors - The Living Room Cafe & Lounge */
+  --primary: #2D2424;       /* Deep Charcoal Brown */
+  --primary-rgb: 45, 36, 36;
+  --primary-light: #524444;
+  --primary-dark: #1A1515;
   
-  --secondary: #D4AF37;      /* Royal Gold */
-  --secondary-rgb: 212, 175, 55;
-  --secondary-light: #FCECB9;
+  --secondary: #EAB308;      /* Fairy Light Golden */
+  --secondary-rgb: 234, 179, 8;
+  --secondary-light: #FEF9C3;
   
-  --bg-color: #FFF9F2;       /* Warm Ivory */
-  --bg-dark: #EFE4D6;
-  --bg-grey: #F3F4F6;        /* Soft Grey */
+  --bg-color: #FFFBF5;       /* Warm Vanilla */
+  --bg-dark: #F7F0E5;
+  --bg-grey: #F3F4F6;        
   
-  --text-dark: #1A1A1A;      /* Dark Charcoal */
-  --text-light: #4A4A4A;     /* Soft Grey Text */
+  --text-dark: #2D2424;      
+  --text-light: #6B7280;     
   
-  --accent: #F58A2C;         /* Warm Orange */
+  --accent: #C2410C;         /* Rust/Sunset Accent */
   
   --white: #FFFFFF;
   --glass: rgba(255, 255, 255, 0.90);
@@ -326,7 +326,7 @@ section {
   min-height: 600px;
   display: flex;
   align-items: center;
-  background-image: url('/images/hero_bg_1773510457863.png');
+  background-image: url('/images/Interior/awesome.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -484,8 +484,7 @@ section {
   background-color: var(--primary);
   color: var(--white);
   text-align: center;
-  padding: 80px 0;
-  background-image: linear-gradient(rgba(11, 45, 92, 0.9), rgba(11, 45, 92, 0.9)), url('/images/interior_dining_1773510860161.png');
+  background-image: linear-gradient(rgba(45, 36, 36, 0.9), rgba(45, 36, 36, 0.9)), url('/images/Interior/awesome.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -697,7 +696,7 @@ section {
 
 /* Final CTA Section */
 .final-cta {
-  background-image: url('/images/hero_bg_1773510457863.png'); 
+  background-image: url('/images/Interior/awesome (1).jpg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

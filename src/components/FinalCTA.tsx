@@ -12,13 +12,13 @@ const FinalCTA = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.6 }}
         >
-          <h2 className="cta-title">Hungry for Raipur's Best Veg Food?</h2>
+          <h2 className="cta-title">Ready for Raipur's Best Lounge Vibe?</h2>
           <p className="cta-subtitle">
-            A Gem of Taste awaits you! Visit Royal Ratna today and enjoy delicious premium meals at everyday prices.
+            Experience art, comfort, and amazing food. Visit The Living Room today for a cozy catch-up!
           </p>
           <div className="cta-btns">
-             <a href="#menu" className="btn-primary" style={{ padding: '14px 34px' }}>Visit Restaurant</a>
-             <a href="https://maps.google.com/?q=Royal+Ratna+Premium+Veg+Restaurant+Raipur" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '14px 34px' }}>
+             <a href="#menu" className="btn-primary" style={{ padding: '14px 34px' }}>View Full Menu</a>
+             <a href="https://maps.google.com/?q=The+Living+Room+Cafe+Lounge+VIP+Road+Raipur" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '14px 34px' }}>
                 Get Directions
              </a>
           </div>

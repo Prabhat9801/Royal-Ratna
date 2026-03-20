@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 
 const reviews = [
   {
-    text: "Nice food, nice service, friendly environment.",
+    text: "The staff of the place is so good and the service of food is also fast.",
+    author: "Happy Customer",
+    stars: 5,
+  },
+  {
+    text: "Nice Ambiance, food taste, quality and quantity is really impressive.",
     author: "Local Guide",
-    stars: 5,
+    stars: 4,
   },
   {
-    text: "Pizza dosa and grilled paneer sandwich are amazing.",
-    author: "Food Lover",
-    stars: 5,
-  },
-  {
-    text: "Food tastes like ghar ka khana.",
-    author: "Regular Customer",
-    stars: 5,
+    text: "Ordered lemon coriander soup, chicken burger!!!",
+    author: "Foodie",
+    stars: 4,
   }
 ];
 
@@ -28,8 +28,8 @@ const Reviews = () => {
           <h2 className="section-title">Customer Reviews</h2>
           <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
           <div className="rating-badge mx-auto mt-4" style={{ marginInline: 'auto' }}>
-            <Star fill="#D4AF37" color="#D4AF37" size={24} />
-            <span className="rating-number">4.9 / 5</span>
+            <Star fill="var(--secondary)" color="var(--secondary)" size={24} />
+            <span className="rating-number">3.9 / 5</span>
             <span className="rating-text">Google Reviews</span>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Reviews = () => {
             >
               <div className="stars">
                 {[...Array(rev.stars)].map((_, j) => (
-                  <Star key={j} fill="#D4AF37" color="#D4AF37" size={16} />
+                  <Star key={j} fill="var(--secondary)" color="var(--secondary)" size={16} />
                 ))}
               </div>
               <p className="review-text">"{rev.text}"</p>

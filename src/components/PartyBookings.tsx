@@ -12,14 +12,14 @@ const PartyBookings = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="section-title text-white">Host Your Small Celebrations With Us</h2>
+            <h2 className="section-title text-white">Celebrate in Raipur's Favorite Lounge</h2>
             <div className="title-underline mx-auto" style={{ marginInline: 'auto', backgroundColor: 'var(--secondary)' }}></div>
             
             <p className="section-subtitle text-white mt-4" style={{ maxWidth: '600px', fontSize: '1.2rem' }}>
-              Royal Ratna offers a warm, inviting space for small gatherings including <strong>Kitty Parties</strong> and <strong>Birthday Parties</strong> for up to <strong>25 people</strong>. Let us make your special occasion delicious and memorable!
+              The Living Room offers a vibrant space for gatherings. From <strong>indoor artsy vibes</strong> to <strong>magical garden parties</strong> with live music. Perfect for birthdays and kitty parties for up to <strong>30 people</strong>.
             </p>
             
-            <a href="tel:+910000000000" className="btn-secondary" style={{ marginTop: '20px' }}>
+            <a href="tel:+919285555002" className="btn-secondary" style={{ marginTop: '20px' }}>
               Book Your Party
             </a>
           </motion.div>

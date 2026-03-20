@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Gem } from 'lucide-react';
+import { Menu, X, Coffee } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Menu', href: '#menu' },
-    { name: 'Breakfast', href: '#breakfast' },
+    { name: 'Breakfast', href: '#all-day-breakfast' },
     { name: 'Reviews', href: '#reviews' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
@@ -26,8 +26,8 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container container">
         <div className="logo">
-          <Gem className="logo-icon" size={28} />
-          <span className="logo-text">Royal Ratna</span>
+          <Coffee className="logo-icon" size={28} />
+          <span className="logo-text">The Living Room</span>
         </div>
         
         <div className="desktop-menu">

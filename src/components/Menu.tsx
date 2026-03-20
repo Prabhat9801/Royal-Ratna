@@ -2,48 +2,39 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const menuData = {
-  "South Indian": [
-    { name: "Paper Dosa", price: "₹80" },
-    { name: "Masala Dosa", price: "₹90" },
-    { name: "Onion Masala Dosa", price: "₹100" },
-    { name: "Pizza Dosa", price: "₹120" },
-    { name: "Corn Dosa", price: "₹135" },
-    { name: "Paneer Dosa", price: "₹149" },
-    { name: "Cheese Corn Paneer Dosa", price: "₹170" }
+  "All Day Breakfast": [
+    { name: "Cheese Omelette", price: "₹209" },
+    { name: "Masala Omelette", price: "₹209" },
+    { name: "Anda Keema Ghotala & Pav", price: "₹209" },
+    { name: "Chicken Keema With Pav", price: "₹350" }
   ],
-  "Idly": [
-    { name: "Plain Idly Sambhar", price: "₹90" },
-    { name: "Dip Idly", price: "₹100" },
-    { name: "Fried Idly", price: "₹130" }
+  "Combos & Meals": [
+    { name: "Dal Khichdi Combo", price: "₹309" },
+    { name: "Veg Manchurian & Fried Rice", price: "₹375" },
+    { name: "Chilli Paneer Meal", price: "₹425" },
+    { name: "Chilli Chicken & Fried Rice", price: "₹450" },
+    { name: "Chicken Khichdi Meal", price: "₹375" }
   ],
-  "Uttapam": [
-    { name: "Plain", price: "₹90" },
-    { name: "Onion", price: "₹100" },
-    { name: "Tomato", price: "₹110" },
-    { name: "Vegetable", price: "₹120" },
-    { name: "Paneer", price: "₹160" },
-    { name: "Cheese Corn Paneer", price: "₹180" }
+  "Platters (Sharing Boards)": [
+    { name: "Veg Sharing Board", price: "₹849" },
+    { name: "Chinese Platter Veg", price: "₹899" },
+    { name: "Veg Kebab Platter (20 Pcs)", price: "₹1,450" }
   ],
-  "Rice Bowls": [
-    { name: "Chole Chawal", price: "₹90" },
-    { name: "Sambhar Chawal", price: "₹90" },
-    { name: "Yellow Dal Chawal", price: "₹90" },
-    { name: "Veg Fried Rice", price: "₹100" },
-    { name: "Paneer Fried Rice", price: "₹120" }
+  "Soups & Salads": [
+    { name: "Cream Of Mushroom Soup", price: "₹275" },
+    { name: "Veg Manchow / Hot & Sour", price: "₹185" },
+    { name: "Chicken Hot & Sour Soup", price: "₹210" },
+    { name: "Veg Caesar Salad", price: "₹309" },
+    { name: "Chicken Greek Salad", price: "₹329" }
   ],
-  "Thali": [
-    { name: "Kashvi Thali", price: "₹95" },
-    { name: "Manyawar Thali", price: "₹145" },
-    { name: "Shree Ji Thali", price: "₹200" }
-  ],
-  "Beverages": [
-    { name: "Cold Coffee", price: "₹80" },
-    { name: "Iced Tea", price: "₹70" },
-    { name: "Masala Cold Drink", price: "₹70" },
-    { name: "Plain Lassi", price: "₹55" },
-    { name: "Punjabi Lassi", price: "₹100" },
-    { name: "Tea", price: "₹20" },
-    { name: "Masala Tea", price: "₹25" }
+  "Starters": [
+    { name: "Crispy Lotus Root Honey Chilli", price: "₹299" },
+    { name: "Paneer Chilli", price: "₹299" },
+    { name: "Honey Chilli Potato", price: "₹299" },
+    { name: "Crispy Lovely Corn", price: "₹289" },
+    { name: "Kung Pao Chicken", price: "₹339" },
+    { name: "Chicken Drums Of Heaven", price: "₹399" },
+    { name: "Fish Chilli", price: "₹339" }
   ]
 };
 
@@ -52,10 +43,10 @@ const Menu = () => {
     <section id="menu" className="menu-category-section">
       <div className="container">
         <div className="text-center">
-           <h2 className="section-title">Our Full Menu</h2>
+           <h2 className="section-title">The Living Room Menu</h2>
            <div className="title-underline mx-auto" style={{ marginInline: 'auto' }}></div>
            <p className="section-subtitle">
-             Explore our wide variety of premium vegetarian dishes, made fresh to order with love.
+             From all-day breakfast comfort to exotic starters and sharing boards, our menu is a curation of Raipur's finest flavors.
            </p>
         </div>
         

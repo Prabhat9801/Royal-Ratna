@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import BreakfastSpecial from './components/BreakfastSpecial';
 import Menu from './components/Menu';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -16,6 +17,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero />
+      <About />
       <BreakfastSpecial />
       <Menu />
       <WhyChooseUs />
