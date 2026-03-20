@@ -22,7 +22,7 @@ const Hero = () => {
       ></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 0.8fr)', alignItems: 'center', gap: '60px' }}>
+        <div className="hero-grid" style={{ alignItems: 'center' }}>
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -33,11 +33,11 @@ const Hero = () => {
               <span style={{ color: 'var(--primary)', fontWeight: 'bold', fontSize: '0.8rem', letterSpacing: '2px' }}>VIBE OF RAIPUR 🔥</span>
             </div>
             
-            <h1 style={{ fontSize: '5.5rem', lineHeight: '1', marginBottom: '30px', fontWeight: 900, color: 'white' }}>
+            <h1 style={{ lineHeight: '1', marginBottom: '30px', fontWeight: 900, color: 'white' }}>
               The Living Room<br/><span style={{ color: 'var(--primary)' }}>Cafe & Lounge</span>
             </h1>
             
-            <p style={{ fontSize: '1.3rem', opacity: 0.9, marginBottom: '45px', maxWidth: '650px', color: 'white' }}>
+            <p className="section-subtitle" style={{ marginBottom: '45px', color: 'white' }}>
               Beyond a Cafe. An Experience in Arts, Coffee & Premium Comfort. Discover the cozy soul of Raipur.
             </p>
             

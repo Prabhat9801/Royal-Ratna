@@ -8,45 +8,29 @@ const Contact = () => {
       <div className="container">
         <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
           <motion.div 
-            className="location-card"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="contact-info-card"
             style={{ 
-              background: 'rgba(255, 255, 255, 0.05)', 
+              background: 'rgba(255,255,255,0.05)', 
               backdropFilter: 'blur(10px)', 
-              border: '1px solid rgba(200, 155, 60, 0.3)', 
               padding: '60px', 
-              borderRadius: '24px',
-              boxShadow: '0 25px 50px rgba(0,0,0,0.3)'
+              borderRadius: '24px', 
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
             }}
           >
-            <h2 className="section-title text-left" style={{ fontSize: '3rem', color: 'var(--primary)', marginBottom: '30px' }}>Location</h2>
+            <h4 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '15px' }}>Visit the lounge</h4>
+            <h2 className="section-title text-left" style={{ fontSize: '3rem', color: 'white', marginBottom: '30px' }}>Where Raipur Meets Comfort</h2>
             
-            <div className="details" style={{ marginBottom: '40px' }}>
-              <div style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-                <MapPin key="pin" style={{ color: 'var(--primary)' }} />
-                <p style={{ color: 'var(--text-main)', fontSize: '1.1rem' }}>
-                  VIP Road (Airport Road)<br/>Towards Phunder Chowk<br/>Raipur, Chhattisgarh 492001
+            <div className="contact-details" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+              <div style={{ display: 'flex', gap: '20px' }}>
+                <MapPin className="text-secondary" size={24} />
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+                  VIP Road (Airport Road), Towards Phunder Chowk,<br/>Raipur, Chhattisgarh 492001
                 </p>
               </div>
-              
-              <div className="tags" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                {['Dine-in', 'Live Music', 'Garden Garden'].map(tag => (
-                  <span key={tag} style={{ background: 'rgba(255,255,255,0.05)', padding: '6px 16px', borderRadius: '4px', fontSize: '0.8rem', border: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-secondary)' }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            <div className="contact-btns" style={{ display: 'flex', gap: '20px' }}>
-              <a href="https://maps.google.com/?q=The+Living+Room+Cafe+Lounge+VIP+Road+Raipur" target="_blank" rel="noreferrer" className="btn-primary">
-                Get Directions
-              </a>
-              <a href="tel:+919285555002" className="btn-secondary">
-                Call Now
-              </a>
             </div>
           </motion.div>
           
