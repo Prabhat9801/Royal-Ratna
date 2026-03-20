@@ -27,7 +27,7 @@ const Reviews = () => {
         <div className="reviews-header text-center">
           <h2 className="section-title">Verified Experiences</h2>
           <p className="section-subtitle">What our regulars say about the lounge atmosphere.</p>
-          <div className="rating-summary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginBottom: '60px' }}>
+          <div className="rating-summary" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', marginBottom: '60px', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', gap: '5px' }}>
               {[1,2,3,4,5].map(s => <Star key={s} fill={s <= 4 ? "#E6B85C" : "transparent"} color="#E6B85C" size={18} />)}
             </div>
@@ -36,7 +36,7 @@ const Reviews = () => {
           </div>
         </div>
 
-        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '30px' }}>
           {reviews.map((rev, i) => (
             <motion.div 
               className="review-card" 

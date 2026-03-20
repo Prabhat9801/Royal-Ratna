@@ -40,7 +40,7 @@ const BreakfastSpecial = () => {
           <p className="section-subtitle">Hand-picked favorites from our curated kitchen.</p>
         </div>
         
-        <div className="breakfast-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
+        <div className="breakfast-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '30px' }}>
           {breakfastItems.map((item, index) => (
             <motion.div 
               className="food-card-white" 

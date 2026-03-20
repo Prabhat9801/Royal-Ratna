@@ -39,7 +39,7 @@ const Menu = () => {
            </motion.div>
         </div>
 
-        <div className="category-tabs" style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '60px' }}>
+        <div className="category-tabs" style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '60px', flexWrap: 'wrap' }}>
           {Object.keys(menuData).map((cat) => (
             <button
               key={cat}
@@ -72,7 +72,7 @@ const Menu = () => {
             className="menu-list"
             style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', 
               gap: '20px' 
             }}
           >

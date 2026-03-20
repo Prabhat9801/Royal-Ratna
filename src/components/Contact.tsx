@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section-accent">
       <div className="container">
-        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', gap: '60px', alignItems: 'center' }}>
+        <div className="contact-grid">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -15,19 +15,19 @@ const Contact = () => {
             style={{ 
               background: 'rgba(255,255,255,0.05)', 
               backdropFilter: 'blur(10px)', 
-              padding: '60px', 
+              padding: 'clamp(30px, 5vw, 60px)', 
               borderRadius: '24px', 
               border: '1px solid rgba(255,255,255,0.1)',
               boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
             }}
           >
-            <h4 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '15px' }}>Visit the lounge</h4>
-            <h2 className="section-title text-left" style={{ fontSize: '3rem', color: 'white', marginBottom: '30px' }}>Where Raipur Meets Comfort</h2>
+            <h4 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '15px', fontSize: 'clamp(0.7rem, 2vw, 0.9rem)' }}>Visit the lounge</h4>
+            <h2 className="section-title text-left">Where Raipur Meets Comfort</h2>
             
             <div className="contact-details" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
               <div style={{ display: 'flex', gap: '20px' }}>
-                <MapPin className="text-secondary" size={24} />
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+                <MapPin className="text-secondary" size={24} style={{ flexShrink: 0 }} />
+                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>
                   VIP Road (Airport Road), Towards Phunder Chowk,<br/>Raipur, Chhattisgarh 492001
                 </p>
               </div>
@@ -37,7 +37,7 @@ const Contact = () => {
           <motion.div 
             className="contact-map-wrapper"
             style={{ 
-              height: '550px', 
+              height: 'clamp(300px, 50vw, 550px)', 
               borderRadius: '24px', 
               overflow: 'hidden', 
               border: '1px solid rgba(255,255,255,0.1)',

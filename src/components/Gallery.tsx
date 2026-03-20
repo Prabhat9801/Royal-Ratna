@@ -21,7 +21,7 @@ const Gallery = () => {
           </p>
         </div>
         
-        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px' }}>
+        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '20px' }}>
           {images.map((src, i) => (
             <motion.div 
               className="gallery-card floating-card-premium" 
