@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="nav-container container">
         <div className="logo">
           <Coffee className="logo-icon" size={28} />
-          <span className="logo-text">The Living Room</span>
+          <span className="logo-text">The Living Room Cafe & Lounge</span>
         </div>
         
         <div className="desktop-menu">
