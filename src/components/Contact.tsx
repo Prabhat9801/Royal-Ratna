@@ -24,12 +24,23 @@ const Contact = () => {
             <h4 style={{ color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '15px', fontSize: 'clamp(0.7rem, 2vw, 0.9rem)' }}>Visit the lounge</h4>
             <h2 className="section-title text-left">Where Raipur Meets Comfort</h2>
             
-            <div className="contact-details" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <MapPin className="text-secondary" size={24} style={{ flexShrink: 0 }} />
-                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>
-                  VIP Road (Airport Road), Towards Phunder Chowk,<br/>Raipur, Chhattisgarh 492001
+            <div className="contact-details" style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+              <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                <MapPin className="text-secondary" size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
+                <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', lineHeight: '1.6' }}>
+                  VIP Road (Airport Road), Towards Phunder Chowk,<br/>Chhattisgarh 492001
                 </p>
+              </div>
+              <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+                 <UtensilsCrossed className="text-secondary" size={24} style={{ flexShrink: 0 }} />
+                 <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)' }}>Opens 11:30 am</p>
+              </div>
+              <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+                 <CheckCircle2 className="text-secondary" size={24} style={{ flexShrink: 0 }} />
+                 <div>
+                   <a href="tel:+919285555002" style={{ color: 'var(--primary)', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', display: 'block', fontWeight: 600 }}>092855 55002</a>
+                   <a href="mailto:livingroomcafe.rpr@gmail.com" style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.9rem, 2vw, 1rem)', display: 'block', marginTop: '4px' }}>livingroomcafe.rpr@gmail.com</a>
+                 </div>
               </div>
             </div>
           </motion.div>

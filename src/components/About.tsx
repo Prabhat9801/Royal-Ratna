@@ -69,7 +69,7 @@ const About = () => {
                 textAlign: 'center', flex: '1 1 100px'
               }}>
                 <Star size={22} style={{ color: 'var(--primary)', marginBottom: '8px', display: 'inline-block' }} />
-                <h3 style={{ color: 'var(--primary)', fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: 900, lineHeight: 1 }}>4.5</h3>
+                <h3 style={{ color: 'var(--primary)', fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: 900, lineHeight: 1 }}>3.9</h3>
                 <p style={{ color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', fontSize: '0.7rem', letterSpacing: '2px', marginTop: '6px' }}>Rating</p>
               </div>
               <div className="stat" style={{ 
@@ -83,7 +83,7 @@ const About = () => {
               </div>
             </div>
 
-            <a href="tel:+919285555002" className="btn-primary" style={{ padding: '14px 36px' }}>Book a Table</a>
+            <a href="https://wa.me/919285555002" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '14px 36px' }}>Book a Table</a>
           </motion.div>
 
           <motion.div

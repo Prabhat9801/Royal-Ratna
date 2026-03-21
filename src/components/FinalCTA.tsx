@@ -18,7 +18,7 @@ const FinalCTA = () => {
           </p>
           <div className="cta-btns">
              <a href="#menu" className="btn-primary" style={{ padding: '14px 34px' }}>View Full Menu</a>
-             <a href="https://www.google.com/maps/place/The+Living+Room+Cafe+%26+Lounge/@21.2262590,81.6837041,17z/" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '14px 34px' }}>
+             <a href="https://www.google.com/maps/dir//The+Living+Room+Cafe+%26+Lounge,+VIP+Road+(Airport+Road)+Towards+Phunder+Chowk,+Chhattisgarh+492001" target="_blank" rel="noreferrer" className="btn-secondary" style={{ padding: '14px 34px' }}>
                 Get Directions
              </a>
           </div>

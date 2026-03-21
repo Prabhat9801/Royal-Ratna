@@ -35,18 +35,21 @@ const Navbar = () => {
           <span className="logo-text">The Living Room <span style={{ color: 'var(--primary)' }}>Cafe & Lounge</span></span>
         </div>
         
+        {/* Standard Desktop Navigation */}
+        <div className="desktop-menu">
+          {navLinks.map((link) => (
+            <a key={link.name} href={link.href} className="nav-link">{link.name}</a>
+          ))}
+          <a href="https://wa.me/919285555002" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '12px 28px', marginLeft: '15px' }}>Book Table</a>
+        </div>
+
+        {/* Mobile Hamburger Button */}
         <button 
-          className="global-menu-btn" 
+          className="mobile-menu-btn" 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{ 
-            display: 'flex', alignItems: 'center', gap: '10px', 
-            background: 'var(--gold-gradient)', color: 'var(--text-dark)', 
-            padding: '10px 24px', borderRadius: '50px', border: 'none',
-            fontWeight: 800, cursor: 'pointer', transition: '0.3s'
-          }}
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          <span>MENU</span>
+          <span className="menu-text">MENU</span>
         </button>
 
         {isMobileMenuOpen && (
